@@ -1,0 +1,122 @@
+// fonts
+@mixin font-regular {
+	font-family: "Fira Sans", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+@mixin font-regular-medium {
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin font-medium {
+	font-family: "Butler", serif;
+	font-weight: normal;
+	font-style: normal;
+}
+@mixin font-bold {
+	font-family: "Butler", serif;
+	font-weight: bold;
+	font-style: normal;
+}
+
+@mixin font($size, $type: "regular") {
+	@if ($type == "regular") {
+		@include font-regular;
+		font-size: $size;
+	}
+	@if ($type == "regular-medium") {
+		@include font-regular-medium;
+		font-size: $size;
+	}
+	@if ($type == "medium") {
+		@include font-medium;
+		font-size: $size;
+	}
+	@if ($type == "bold") {
+		@include font-bold;
+		font-size: $size;
+	}
+}
+
+// CTAs
+@mixin cta {
+	background-color: $light-blue;
+
+	backface-visibility: hidden;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	white-space: nowrap;
+	border-radius: 500px;
+	border: 0px solid $light-blue;
+	border-width: 0px 0px 0px 0px;
+	padding: 5px 15px 5px 15px;
+	text-align: center;
+	color: $color-white;
+	text-decoration: none;
+
+	position: relative;
+
+	overflow: hidden;
+
+	@include breakpoint(large) {
+		padding: 10px 15px 10px 15px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: calc(50% - 100px);
+		top: calc(50% - 100px);
+		background-color: $dark-blue;
+
+		z-index: 1;
+
+		width: 200px;
+		height: 200px;
+
+		transform: scale(0);
+
+		border-radius: 50%;
+
+		transition: all 0.5s ease-out;
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+		transition: all 0.5s ease-out;
+	}
+
+	&.-outline {
+		border-width: 1px;
+		background-color: transparent;
+		color: $light-blue;
+
+		transition: border-color 0.5s ease-out;
+
+		&:hover {
+			border-color: $dark-blue;
+		}
+	}
+
+	&.-light {
+		border-color: $color-white;
+		color: $color-white;
+
+		&::before {
+			background-color: $color-white;
+		}
+		&:hover {
+			span {
+				color: $dark-blue;
+			}
+		}
+	}
+
+	&:hover::before {
+		transform: scale(1);
+		transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	}
+}

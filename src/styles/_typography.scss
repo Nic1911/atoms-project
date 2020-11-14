@@ -1,0 +1,34 @@
+@font-face {
+	font-family: "Butler";
+	src: url("~@/assets/fonts/Butler-Bold.woff2") format("woff2"),
+		url("~@/assets/fonts/Butler-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Butler";
+	src: url("~@/assets/fonts/Butler.woff2") format("woff2"),
+		url("~@/assets/fonts/Butler.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Fira Sans";
+	src: url("~@/assets/fonts/FiraSans-Regular.woff2") format("woff2"),
+		url("~@/assets/fonts/FiraSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Fira Sans";
+	src: url("~@/assets/fonts/FiraSans-Medium.woff2") format("woff2"),
+		url("~@/assets/fonts/FiraSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}

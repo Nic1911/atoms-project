@@ -1,0 +1,75 @@
+body {
+	font-family: "Fira Sans", sans-serif;
+	line-height: 1.5;
+	strong {
+		font-weight: bold;
+	}
+	margin: 0;
+	padding: 0;
+	color: $dark-blue;
+}
+
+img {
+	max-width: 100%;
+}
+
+button {
+	border-radius: 0;
+	background-color: inherit;
+	border: inherit;
+	padding: 0;
+}
+
+ul,
+ul li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.c-geometry {
+	pointer-events: none;
+	touch-action: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 50vh;
+	height: 50vh;
+
+	opacity: 0.5;
+
+	position: absolute;
+
+	&.-rounded,
+	.-rounded {
+		border-radius: 50%;
+	}
+
+	&.-soft-blue,
+	.-soft-blue {
+		background-color: $soft-blue;
+	}
+	&.-soft-gray,
+	.-soft-gray {
+		background-color: $soft-gray;
+	}
+}
+
+.call-to-action {
+	@include cta;
+}
+a {
+	// &:not(.call-to-action),
+	// &:active,
+	// &:focus,
+	// &:visited {
+	// 	color: $dark-blue;
+	// }
+	// &:not(.call-to-action) {
+	// 	&:hover {
+	// 		text-decoration: underline;
+	// 	}
+	// }
+}

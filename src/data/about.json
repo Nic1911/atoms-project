@@ -1,0 +1,23 @@
+{
+	"title": "About",
+	"id": "about",
+	"slug": "about",
+	"description": "Descrizione tradotta lorem ipsum lorem",
+	"headTitle": "My Heading",
+	"asideTitle": "My Aside",
+	"contentTitle": "My Content",
+	"cover": {
+		"title": "Cover",
+		"width": 1920,
+		"height": 1080,
+		"type": "image/jpg",
+		"src": "https://via.placeholder.com/640",
+		"src640": "https://via.placeholder.com/640x200",
+		"src768": "https://via.placeholder.com/768x400",
+		"src1200": "https://via.placeholder.com/1200x960",
+		"src1920": "https://via.placeholder.com/1920x1080",
+		"fileSize": "200kb",
+		"fileName": "cover.jpg",
+		"id": "cover"
+	}
+}
